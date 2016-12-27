@@ -1,0 +1,163 @@
+.RNAV-overlay{
+    
+    position: fixed; /* Stay in place */
+    z-index: 9999999999; /* Sit on top */
+    left: 0;
+    top:0;
+    align-items: flex-start;
+    display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-moz-justify-content: center;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+    background-color: rgb(255,255,255); /* White fallback color */
+    background-color: rgba(255,255,255, 1); /* White w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-y: auto;
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+
+
+	/* Position the content inside the overlay */
+	.overlay-content {
+		position: relative;
+		 border-top: 1px solid gray;
+		width: 100%; /* 100% width */
+		height:100%;
+		display: block;
+		max-width: 100%;
+		opacity: 1;
+		position: relative;
+		padding-bottom:5em;
+		width: 100%;
+		overflow-x:hidden;
+		overflow-y: auto;
+		
+		/* The navigation links inside the overlay */
+		a {
+		    padding: 0px;
+		    text-decoration: none;
+		    font-size: 1em;
+		    color: #2C5697;
+		    display: inline-block; /* Display block instead of inline */
+		    transition: 0.3s; /* Transition effects on hover (color) */
+		    float: left;
+			text-align: left;
+			padding-top: 1.15em;
+			padding-left:5px;
+		}
+		.overlay-menu-item:last-of-type{
+			border-bottom:0.25px solid lightgray;
+		}
+		.overlay-menu-item{
+			border-top:0.25px solid lightgray;
+			background:white;
+			height:5em;
+			clear: both;
+		}
+		.overlay-logo-container{
+			padding:1em;
+			/* Position the close button (top right corner) */
+			.closebtn {
+			   	display:none;
+			    position: relative;
+			    float:right;
+				font-size: 40px;
+				cursor: pointer;
+			}
+		}
+		.overlay-logo-container img{
+			max-width:160px;
+			width:50%;
+		}
+		/* When you mouse over the navigation links, change their color */
+		.overlay a:hover, .overlay a:focus {
+		    color: #2C5697;
+		}
+	}
+}
+
+
+
+
+
+#RNAV-OpenNavigationWrapper{
+    height: 75px;
+    width: 90px;
+    -webkit-transition: .2s ease;
+	transition: .2s ease;
+	cursor: pointer;
+	position: relative;
+	vertical-align: middle;
+	float:right;
+	
+	.navigation-toggle {
+	    height: 25px;
+	    left: 30px;
+	    top: 25px;
+	    width: 35px;
+	    
+	    -webkit-transform: rotate(0);
+		transform: rotate(0);
+		-webkit-transition: .2s ease;
+		transition: .2s ease;
+		
+		position: absolute;
+	
+	}
+	.navigation-toggle .navigation-toggle__bar:nth-child(1) {
+	    top: 0;
+	}
+	
+	.navigation-toggle__bar {
+	    border-radius: 10px;
+	    height: 5px;
+	}
+	
+	.navigation-toggle__bar {
+	    -webkit-transform: rotate(0);
+	    transform: rotate(0);
+	    -webkit-transition: 250ms ease-in-out;
+	    transition: 250ms ease-in-out;
+	    border-radius: 3px;
+	    display: block;
+	    height: 3px;
+	    left: 0;
+	    opacity: 1;
+	    position: absolute;
+	    width: 100%;
+	}
+	
+	.navigation-toggle__bar {
+	    background-color: #2C5697;
+	}
+	
+	.navigation-toggle .navigation-toggle__bar:nth-child(2), .navigation-toggle .navigation-toggle__bar:nth-child(3) {
+	    top: 10px;
+	}
+	
+	.navigation-toggle__bar {
+	    border-radius: 10px;
+	    height: 5px;
+	}
+	
+	.navigation-toggle__bar {
+	    -webkit-transform: rotate(0);
+	    transform: rotate(0);
+	    -webkit-transition: 250ms ease-in-out;
+	    transition: 250ms ease-in-out;
+	    border-radius: 3px;
+	    display: block;
+	    height: 3px;
+	    left: 0;
+	    opacity: 1;
+	    position: absolute;
+	    width: 100%;
+	}
+	
+	.navigation-toggle .navigation-toggle__bar:nth-child(4) {
+	    top: 20px;
+	}
+}
