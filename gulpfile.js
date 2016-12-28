@@ -9,18 +9,18 @@ var minifyCSS = require('gulp-minify-css');
 //Concatenate & Minify JS
 gulp.task('minify-js', function() {
     return gulp.src('src/js/*.js')
-        .pipe(concat('highscroll.js'))
+        .pipe(concat('rnav.js'))
         .pipe(gulp.dest('dist/js'))
-        .pipe(rename('highscroll.min.js'))
+        .pipe(rename('rnav.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
 
 //create task
 gulp.task('minify-css', function(){
-    return gulp.src('src/stylesheets/*.css')
+    return gulp.src('src/css/*.css')
         .pipe(minifyCSS())
-        .pipe(concat('style.min.css'))
+        .pipe(concat('rnav.min.css'))
         .pipe(gulp.dest('dist/css'))
 });
 

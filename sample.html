@@ -3,16 +3,41 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link href="src/css/main.css" rel="stylesheet" type="text/css"/>
+<link href="dist/css/rnav.min.css" rel="stylesheet" type="text/css"/>
+<style>
+/*
+Because the module provides minimal styling
+you need to apply your own styles to the elements.
+*/
+.RNAV-overlay .overlay-content a{
+	text-align: center;
+	width:100%;
+	font-weight: bold;
+	letter-spacing: 10px;
+}
+/*
+If you want the hamburger button to only be
+displayed for certain viewports, use media queries.
+*/
+#RNAV-OpenNavigationWrapper{
+	display: none;
+}
+@media (max-width: 760px) {
+	#RNAV-OpenNavigationWrapper{
+		display: block;
+	}
+}
+</style>
 </head>
 <body>
 
-<script src="src/js/main.js"></script>
+<script src="dist/js/rnav.min.js"></script>
 <script>
 RNAV.init({
-	direction:'right',
+	logoPath:'https://upload.wikimedia.org/wikipedia/commons/c/c9/FADER-logo.jpg',
+	direction:'down',
 	menuItems:[
-           {html:'<a class="internalNav"  href="moving-process.html" id="">Moving Process</a>',attributes:['data-goto="moving-services"','data-test="true"']}
+           {html:'<a class=""  href="sample.html" id="">HOME</a>',attributes:['data-custom="dosomething"','data-test="true"']}
     ]
 });
 </script>
