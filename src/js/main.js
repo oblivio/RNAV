@@ -104,7 +104,7 @@
 		 document.body.classList.remove('RNAV-modal-open');
 //	     $('main').removeClass('modal-open');
 //	     $('.navigation-toggle').show();
-//	     document.getElementById('RNAV-modal-close-btn').style.display = "none";
+	     document.getElementById('RNAV-modal-close-btn').style.display = "none";
 	 };
 	 
 
