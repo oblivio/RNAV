@@ -290,9 +290,11 @@
         
         RNAV.options = settings;
         
-        window.onload = function(){
-        	DOMready();
-        }
+        document.getElementById('RNAV-NavToggle').onclick = RNAV.openNavigation;
+        
+//        window.onload = function(){
+//        	DOMready();
+//        }
     };
 
 

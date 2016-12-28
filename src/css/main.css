@@ -81,7 +81,7 @@
   -webkit-transition: .2s ease;
   transition: .2s ease;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   z-index: 9999;
   vertical-align: middle;
   right: 0;
