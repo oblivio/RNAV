@@ -89,9 +89,11 @@
     -webkit-transition: .2s ease;
 	transition: .2s ease;
 	cursor: pointer;
-	position: relative;
+	position: absolute;
+	z-index:9999;
 	vertical-align: middle;
-	float:right;
+	right:0;
+	top:0;
 	
 	.navigation-toggle {
 	    height: 25px;
